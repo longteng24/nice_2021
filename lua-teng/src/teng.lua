@@ -66,7 +66,7 @@
 arr={1,2,3}
 for k, v in pairs(arr) do
 
-    print(k, v)
+       print(k, v)
 end
 
 
