@@ -1,4 +1,4 @@
-package com.teng.springcloud.eureka_server;
+package com.teng.springcloud.eur_provider;
 
 import java.net.URI;
 import java.util.Collections;
@@ -20,6 +20,9 @@ public class MainController {
 
 	@Value("${server.port}")
 	String port;
+
+	@Autowired
+	HealthStatusService healthStatusSrv;
 
 	@GetMapping("/hi")
 	public String getHi() {
@@ -61,7 +64,12 @@ public class MainController {
 	}
 
 
+	@GetMapping("/health")
+	public String health(@RequestParam("status") Boolean status) {
 
+		healthStatusSrv.setStatus(status);
+		return healthStatusSrv.getStatus();
+	}
 
 
 

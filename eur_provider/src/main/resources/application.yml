@@ -1,0 +1,27 @@
+
+#注册中心
+eureka:
+  client:
+    #设置服务注册中心的URL
+    service-url:
+      defaultZone: http://teng:teng@euk2.com:7001/eureka/
+      # 在client端配置：将自己真正的健康状态传播到server。
+    healthcheck:
+      enabled: true
+
+spring:
+  application:
+    name: euk_provider
+
+server:
+  port: 8002
+  ## 监控的信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        # 开启可远程关闭当前节点
+  endpoint:
+    shutdown:
+      enabled: true

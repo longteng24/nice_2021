@@ -88,7 +88,7 @@ public class HiController {
     //获取指定服务实例信息
     @GetMapping("/client5")
     public String getClient5() {
-        List<InstanceInfo> ins = eurekaClient.getInstancesByVipAddress("euk_server01",false);
+        List<InstanceInfo> ins = eurekaClient.getInstancesByVipAddress("euk_provider",false);
         if (ins.size() == 0) {
 
             return "can not find server";
@@ -109,7 +109,7 @@ public class HiController {
     @GetMapping("/client6")
     public String getClient6() {
 
-        ServiceInstance info = lb.choose("euk_server01");
+        ServiceInstance info = lb.choose("euk_provider");
 
         String url = "http://" + info.getHost() + ":" + info.getPort() + "/hi";
 

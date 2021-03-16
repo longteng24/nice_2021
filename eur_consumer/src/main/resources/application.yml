@@ -8,11 +8,11 @@ eureka:
   client:
     #设置服务注册中心的URL
     service-url:
-      defaultZone: http://euk2.com:7002/eureka/
+      defaultZone: http://teng:teng@euk2.com:7001/eureka/
 
 
 spring:
   application:
-    name: euk_client01
+    name: euk_consumer
 
 

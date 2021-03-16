@@ -1,4 +1,4 @@
-package com.teng.springcloud.eureka_server;
+package com.teng.springcloud.eur_provider;
 
 public class Person {
 
