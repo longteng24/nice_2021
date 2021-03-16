@@ -13,3 +13,8 @@ eureka:
 
 server:
   port: 7001
+
+
+spring:
+  application:
+    name: euk_server01

@@ -1,0 +1,18 @@
+
+#注册中心
+eureka:
+  #      元数据信息
+  instance:
+    metadata-map:
+      dalao: Isteng
+  client:
+    #设置服务注册中心的URL
+    service-url:
+      defaultZone: http://euk2.com:7002/eureka/
+
+
+spring:
+  application:
+    name: euk_client01
+
+

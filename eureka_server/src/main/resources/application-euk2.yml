@@ -16,3 +16,7 @@ eureka:
 # tomcat端口
 server:
   port: 7002
+
+spring:
+  application:
+    name: euk_server02
