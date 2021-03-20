@@ -39,7 +39,7 @@ public class HiControllerPlus {
     @GetMapping("/client7")
     public String getClient6() {
 
-        ServiceInstance info = lb.choose("EUK_PROVIDER");
+        ServiceInstance info = lb.choose("provider");
 
         String url = info.getUri() + "/hi";
 
@@ -63,7 +63,7 @@ public class HiControllerPlus {
     @GetMapping("/client8")
     public String getClient8() {
 
-        List<ServiceInstance> instances = discoveryClient.getInstances("EUK_PROVIDER");
+        List<ServiceInstance> instances = discoveryClient.getInstances("provider");
         System.out.println("instances:"+instances);
 
         int nextInt = new Random().nextInt(instances.size());

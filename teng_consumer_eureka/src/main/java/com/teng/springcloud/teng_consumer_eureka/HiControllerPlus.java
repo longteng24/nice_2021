@@ -63,7 +63,7 @@ public class HiControllerPlus {
     @GetMapping("/client8")
     public String getClient8() {
 
-        List<ServiceInstance> instances = discoveryClient.getInstances("EUK_PROVIDER");
+        List<ServiceInstance> instances = discoveryClient.getInstances("provider");
         System.out.println("instances:"+instances);
 
         int nextInt = new Random().nextInt(instances.size());
@@ -77,6 +77,18 @@ public class HiControllerPlus {
         String url = inst.getUri() + "/hi";
 
         System.out.println("url: "+url);
+        RestTemplate restTemplate = new RestTemplate();
+
+        return  restTemplate.getForObject(url, String.class);
+    }
+
+    /*
+     restTemplate 结合 ribbon
+     */
+    @GetMapping("/client9")
+    public String getClient9() {
+        String url = "http://provider/hi";
+
 
         return   restTemplate.getForObject(url, String.class);
     }

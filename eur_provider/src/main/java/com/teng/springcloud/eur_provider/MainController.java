@@ -57,7 +57,7 @@ public class MainController {
 
 		URI uri = new URI("https://www.baidu.com/s?wd="+person.getName().trim());
 
-	//	response.addHeader("Location", uri.toString());
+		response.addHeader("Location", uri.toString());
 
 		return uri;
 
