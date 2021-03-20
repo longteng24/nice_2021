@@ -1,4 +1,3 @@
-
 #注册中心
 eureka:
   #      元数据信息
@@ -8,13 +7,13 @@ eureka:
   client:
     #设置服务注册中心的URL
     service-url:
-      defaultZone: http://euk2.com:7001/eureka/
+      defaultZone: http://euk1.com:7001/eureka/
 
 
 spring:
   application:
-    name: euk_consumer
+    name: teng_consumer
 
 
-ribbon:
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+server:
+  port: 8006

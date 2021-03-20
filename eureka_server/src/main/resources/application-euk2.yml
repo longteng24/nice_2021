@@ -6,11 +6,11 @@ eureka:
    # fetch-registry: false
     #设置服务注册中心的URL，用于client和server端交流
     service-url:
-      defaultZone: http://euk2.com:7001/eureka/   # eureka 所有操作调用
+      defaultZone: http://euk1.com:7001/eureka/   # eureka 所有操作调用
   instance:
     # appname 用来分组， hostname 用于标识主机
-    appname: euk1.com
-    hostname: euk2.com
+    appname: eukServer
+    hostname: euk2
 
 
 # tomcat端口

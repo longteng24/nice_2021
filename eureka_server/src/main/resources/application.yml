@@ -1,3 +1,10 @@
 spring:
   profiles:
     active: euk1
+
+
+
+
+
+# 设置以哪个配置文件启动   idea program agu  --spring.profiles.active=euk1
+# 设置启动的端口  Environment variables   server.port=8001
