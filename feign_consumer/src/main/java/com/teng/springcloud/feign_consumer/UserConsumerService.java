@@ -4,7 +4,7 @@ import com.teng.springCloud.RegisterApi;
 import org.springframework.cloud.openfeign.FeignClient;
 
 
-@FeignClient(name = "user-provider")
-public interface UserConsumerService extends RegisterApi {
-
-}
+//@FeignClient(name = "user-provider")
+//public interface UserConsumerService extends RegisterApi {
+//
+//}
