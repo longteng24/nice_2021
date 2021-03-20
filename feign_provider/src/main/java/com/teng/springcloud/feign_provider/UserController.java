@@ -3,18 +3,35 @@ package com.teng.springcloud.feign_provider;
 import com.teng.springCloud.Person;
 import com.teng.springCloud.RegisterApi;
 import org.apache.commons.lang.builder.ToStringBuilder;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 public class UserController implements RegisterApi {
 
+	@Value("${server.port}")
+	String port;
+
+	private AtomicInteger count = new AtomicInteger();
 	@Override
 	public String isAlive() {
-		// TODO Auto-generated method stub
-		return "ok";
+
+		try {
+			System.out.println("准备睡");
+
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		int i = count.getAndIncrement();
+		System.out.println("====好的第：" + i + "次调用");
+		return "port:" + port;
 	}
 	@Override
 	public String getById(Integer id) {
