@@ -1,0 +1,14 @@
+# dashboard 配置  http://localhost:90/actuator/hystrix.stream  http://localhost:90/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A90%2Factuator%2Fhystrix.stream
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"
+
+
+
