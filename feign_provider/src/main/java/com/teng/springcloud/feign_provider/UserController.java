@@ -22,7 +22,7 @@ public class UserController implements RegisterApi {
 
 		try {
 			System.out.println("准备睡");
-
+			int i = 1 / 0;
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

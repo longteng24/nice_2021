@@ -12,4 +12,6 @@ public class FeignConsumerApplication {
         SpringApplication.run(FeignConsumerApplication.class, args);
     }
 
+
+
 }

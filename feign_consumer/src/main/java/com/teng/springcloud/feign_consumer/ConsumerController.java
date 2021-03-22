@@ -12,9 +12,7 @@ import java.util.Map;
 @RestController
 public class ConsumerController {
 
-//	@Autowired
-//	UserConsumerService consumerSrv;
-//
+
 	@Autowired
 	ConsumerApi api;
 
@@ -61,16 +59,16 @@ public class ConsumerController {
 
 
 
-	@GetMapping("/postPerson")
-	public Person postPerson(@RequestParam Map<String, Object> map) {
-
-		System.out.println(map);
-
-		Person person = new Person();
-		person.setId(Integer.parseInt(map.get("id").toString()));
-		person.setName("xxoo");
-		return api.postPserson(person);
-	};
+//	@GetMapping("/postPerson")
+//	public Person postPerson(@RequestParam Map<String, Object> map) {
+//
+//		System.out.println(map);
+//
+//		Person person = new Person();
+//		person.setId(Integer.parseInt(map.get("id").toString()));
+//		person.setName("xxoo");
+//		return api.postPserson(person);
+//	};
 
 	@GetMapping("/hiTeng")
 	public String hiTeng(@RequestParam String name) {

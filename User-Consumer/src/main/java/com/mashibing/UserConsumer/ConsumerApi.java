@@ -1,4 +1,4 @@
-package com.teng.springcloud.feign_consumer;
+package com.mashibing.UserConsumer;
 
 import com.teng.springCloud.RegisterApi;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -36,7 +36,7 @@ public interface ConsumerApi extends RegisterApi {
 	@PostMapping("/postMap")
 	Map<Integer, String> postMap(Map<String, Object> map);
 
-	@GetMapping("/hiTeng")
-	String hiTeng(@RequestParam("name") String name);
+
+
 
 }
