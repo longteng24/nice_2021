@@ -16,10 +16,23 @@ public class ConsumerController {
 	@Autowired
 	ConsumerApi api;
 
+	@Autowired
+	MethodHystrixService method;
+
 	@GetMapping("/alive")
 	public String alive() {
 
 		return api.isAlive();
+	}
+
+	/**
+	 *  hystrix+restTemplate  实现降级
+	 * @return
+	 */
+	@GetMapping("/restAlive")
+	public String restAlive() {
+
+		return method.alive();
 	}
 	@GetMapping("/map")
 	public Map<Integer, String> map(Integer id) {
